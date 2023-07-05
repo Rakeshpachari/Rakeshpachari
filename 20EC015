@@ -1,10 +1,28 @@
- I’m @Rakeshpachari
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+create database university;
+use university;
+create table students(
+student_id int primary key,
+student_name varchar(50),
+student_age int,
+student_major varchar(50));
+insert into students values(1,"virat",21,"CSE");
+insert into students values(2,"ramya",22,"CSE");
+insert into students values(3,"seetha",23,"ECE");
+insert into students values(4,"geetha",19,"CSE");
+insert into students values(5,"prithi",20,"ECE");
+insert into students values(6,"hari",21,"ECE");
 
-<!---
-Rakeshpachari/Rakeshpachari is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+select*from students
+where student_major="CSE";
+
+update students
+set student_major='CSE' 
+where student_id='6';
+select*from students;
+
+delete from students
+where student_id=5;
+select*from students;
+
+select *from students
+where student_age>21;
